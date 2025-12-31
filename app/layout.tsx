@@ -1,4 +1,6 @@
 // app/layout.tsx
+// "use client";
+// import React, { useState } from "react";
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/Navbar";
@@ -10,6 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  // const [isOpen, setIsOpen] = useState(false);
   return (
     <html lang="en">
       <body className="antialiased flex flex-col min-h-screen">
