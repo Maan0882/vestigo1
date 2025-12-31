@@ -1,26 +1,45 @@
 @import "tailwindcss";
 
+@theme {
+  /* Requested Color Theme Mapping */
+  --color-vestigo-navy: #001F3F;
+  --color-vestigo-gold: #D4AF37;
+  --color-vestigo-gray: #E0E0E0;
+  --color-vestigo-white: #FFFFFF;
+  
+  /* Transitional Mapping for existing components */
+  --color-vestigo-blue: #001F3F;
+  --color-vestigo-lime: #D4AF37;
+  --color-vestigo-dark: #001021;
+}
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground: #001F3F;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(to right, #D4AF37, #F1D592);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-pattern-grid {
+  background-image: radial-gradient(#D4AF37 0.5px, transparent 0.5px);
+  background-size: 30px 30px;
+}
+
+.bg-pattern-lines {
+  background-image: linear-gradient(#E0E0E0 1px, transparent 1px), linear-gradient(90deg, #E0E0E0 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.image-overlay {
+  background: linear-gradient(to bottom, rgba(0, 31, 63, 0.8), rgba(0, 31, 63, 0.4));
 }
