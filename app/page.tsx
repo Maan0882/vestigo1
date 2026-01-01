@@ -1,130 +1,308 @@
-"use client";
-import React from "react";
-import { ShieldCheck, ArrowRight, Building2, Truck, HeartPulse, Leaf, Award, ChevronRight } from "lucide-react";
+import React from 'react';
+import { Shield, Handshake, Settings, Factory, Cpu, HardHat, Search, FileText, Users, FileCheck } from 'lucide-react';
 
-const Link = ({ href, children, className }: any) => (
-  <a href={href} className={className}>{children}</a>
-);
-
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="bg-white font-sans text-vestigo-navy overflow-x-hidden">
-      {/* 1. HERO SECTION */}
-      <section className="relative min-h-screen lg:min-h-[85vh] flex items-center pt-20">
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="relative text-white py-16 min-h-125 flex items-center overflow-hidden">
+        {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&q=80&w=2000" 
+            src="/bs_meet3.jpg" 
             alt="Background" 
+            className="w-full h-full object-cover blur-sm"
+          />
+        </div>
+        
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 z-10 bg-linear-to-t from-slate-800 via-slate-800/95 to-slate-900/40"></div>
+        
+        {/* Content */}
+        <div className="relative z-20 max-w-7xl mx-auto px-6 w-full py-16">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-6xl font-bold mb-5">
+                <span className="text-yellow-400">Strategic Risk<br/> Advisory</span>
+                <span className="text-white"> for Growth</span>
+              </h1>
+              <p className="text-gray-300 text-lg mb-6">
+                Vestigo is a licensed insurance broker delivering risk advisory, claims advocacy, 
+                and technology-driven insurance solutions to protect forward thinking businesses.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <button className="bg-yellow-400 text-slate-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-300 transition shadow-lg">
+                  Get Expert Advice
+                </button>
+                <button className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-slate-900 transition">
+                  Our Technology →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Feature Cards */}
+      <section className="relative -mt-20 z-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Card 1 */}
+            <div className="bg-linear-to-t from-white via-transparent to-transparent rounded-xl shadow-xl p-8 text-center hover:shadow-2xl transition-shadow relative">
+              
+              
+              <div className="relative inline-block mb-6 -mt-2">
+                <div className="bg-white absolute inset-0 rounded-full shadow-xl scale-110">
+                  <div className="absolute top-13 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <div className="w-89 h-1.5 bg-linear-to-r from-yellow-400 via-transparent to-yellow-400"></div>
+                  </div>
+                </div>
+                <div className="relative inline-flex items-center justify-center w-20 h-20 bg-slate-900 rounded-full border-5 border-yellow-400">
+                  <Shield className="w-9 h-9 text-white" />
+                </div>
+              </div>
+              
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Regulatory Compliant</h3>
+              <p className="text-gray-600">Fully Licensed & Transparent</p>
+            </div>
+            
+            {/* Card 2 */}
+            <div className="bg-linear-to-t from-white via-transparent to-transparent rounded-xl shadow-xl p-8 text-center hover:shadow-2xl transition-shadow relative">
+                        
+              <div className="relative inline-block mb-6 -mt-2">
+                <div className="bg-white absolute inset-0 rounded-full shadow-xl scale-110">
+                  <div className="absolute top-13 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <div className="w-89 h-1.5 bg-linear-to-r from-yellow-400 via-transparent to-yellow-400"></div>
+                  </div>
+                </div>
+                <div className="relative inline-flex items-center justify-center w-20 h-20 bg-slate-900 rounded-full border-5 border-yellow-400">
+                  <Handshake className="w-9 h-9 text-white" />
+                </div>
+              </div>
+              
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Expert B2B Advisory</h3>
+              <p className="text-gray-600">Tailored B2B Solutions</p>
+            </div>
+            
+            {/* Card 3 */}
+            <div className="bg-linear-to-t from-white via-transparent to-transparent rounded-xl shadow-xl p-8 text-center hover:shadow-2xl transition-shadow relative">
+                
+              <div className="relative inline-block mb-6 -mt-2">
+                <div className="bg-white absolute inset-0 rounded-full shadow-xl scale-110">
+                  <div className="absolute top-13 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <div className="w-89 h-1.5 bg-linear-to-r from-yellow-400 via-transparent to-yellow-400"></div>
+                  </div>
+                </div>
+                <div className="relative inline-flex items-center justify-center w-20 h-20 bg-slate-900 rounded-full border-5 border-yellow-400">
+                  <Settings className="w-9 h-9 text-white" />
+                </div>
+              </div>
+              
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Tech-Enabled Process</h3>
+              <p className="text-gray-600">Efficient & Secure</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-slate-900 mb-12">Services</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="border border-gray-200 rounded-lg p-8 text-center hover:shadow-lg transition">
+              <div className="inline-flex items-center justify-center w-16 h-16 mb-4">
+                <Factory className="w-12 h-12 text-slate-700" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900">Manufacturing Risks</h3>
+            </div>
+            
+            <div className="border border-gray-200 rounded-lg p-8 text-center hover:shadow-lg transition">
+              <div className="inline-flex items-center justify-center w-16 h-16 mb-4">
+                <Cpu className="w-12 h-12 text-slate-700" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900">Cyber Liability</h3>
+            </div>
+            
+            <div className="border border-gray-200 rounded-lg p-8 text-center hover:shadow-lg transition">
+              <div className="inline-flex items-center justify-center w-16 h-16 mb-4">
+                <HardHat className="w-12 h-12 text-slate-700" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900">Construction & Infra</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Approach Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-slate-900 mb-4">Our Approach</h2>
+          <p className="text-gray-600 mb-12">A clear, client-centric approach to risk management and insurance braking.</p>
+          
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 rounded-full mb-4">
+                <Search className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Understand Risk</h3>
+            </div>
+            
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 rounded-full mb-4">
+                <FileText className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Design Coverage</h3>
+            </div>
+            
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 rounded-full mb-4">
+                <Users className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Place with Insurers</h3>
+            </div>
+            
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 rounded-full mb-4">
+                <FileCheck className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Support Claims</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="relative bg-slate-900 text-white py-12">
+        <div className="absolute inset-0 opacity-20">
+          <img 
+            src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&q=80&w=2000" 
+            alt="City skyline" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-linear-to-r from-vestigo-navy via-vestigo-navy/90 md:via-vestigo-navy/80 to-transparent" />
         </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-6 w-full py-20">
-          <div className="max-w-2xl space-y-6 md:space-y-8">
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-white leading-[1.1] tracking-tighter">
-              Securing the <br/>
-              <span className="text-vestigo-gold">Modern Economy</span>
-            </h1>
-            <p className="text-lg md:text-xl text-blue-100/70 leading-relaxed max-w-lg">
-              Vestigo is a leading risk management conglomerate, providing world-class protection for industrial pioneers.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Link href="/solutions" className="bg-vestigo-gold text-vestigo-navy px-8 py-4 rounded-full font-black text-center text-lg hover:bg-white transition-all flex items-center justify-center gap-2">
-                Explore Units <ArrowRight size={20}/>
-              </Link>
-              <Link href="/contact" className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-black text-center text-lg hover:bg-white/10 transition-all backdrop-blur-sm">
-                Request Consultation
-              </Link>
-            </div>
-          </div>
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-3">
+            Protect your business with the right insurance strategy
+          </h2>
+          <p className="text-gray-300 text-sm md:text-base mb-5">
+            Schedule a no-obligation consultation with our experts today
+          </p>
+          <button className="bg-yellow-400 text-slate-900 px-7 py-2.5 rounded-full font-semibold text-sm hover:bg-yellow-300 transition shadow-lg">
+            Request Your Consultation
+          </button>
         </div>
-      </section>
-
-      {/* 2. CORPORATE OVERVIEW */}
-      <section className="py-20 md:py-32 bg-white relative">
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 md:gap-24 items-center">
-            <div className="relative order-2 lg:order-1">
-              <div className="aspect-4/5 sm:aspect-square lg:aspect-4/5 rounded-[2.5rem] md:rounded-[4rem] overflow-hidden shadow-2xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200" 
-                  alt="Architecture" 
-                  className="w-full h-full object-cover"
-                />
+        {/* Content */}
+        <div className="relative z-20 max-w-7xl mx-auto p-5 px-4 sm:px-6 lg:px-8 w-full">
+          <div className="grid md:grid-cols-5 gap-6 border-t border-gray-700 p-5">
+            {/* Company Info */}
+            <div>
+              <div className="text-xl font-bold mb-3">
+                <img src="/vestigo_logo.png" alt="Vestigo" className="h-8 md:h-10 w-auto" />
               </div>
-              <div className="absolute -bottom-6 -right-4 md:-bottom-10 md:-right-10 bg-vestigo-gold p-8 md:p-12 rounded-4xl md:rounded-[3rem] shadow-2xl">
-                <div className="text-white text-3xl md:text-5xl font-black">15+</div>
-                <div className="text-vestigo-navy/60 font-black uppercase text-[10px] md:text-xs tracking-widest">Sectors</div>
-              </div>
-            </div>
-
-            <div className="space-y-6 md:order-2">
-              <h2 className="text-xs font-black uppercase tracking-[0.3em] text-vestigo-gold">Corporate Profile</h2>
-              <h3 className="text-3xl md:text-5xl font-black leading-tight text-vestigo-navy">
-                Heritage Meets Technological Agility
-              </h3>
-              <p className="text-base md:text-lg text-gray-600 leading-relaxed font-medium">
-                Combining a century-long legacy of risk management with modern, data-driven diagnostics to redefine reliability.
+              <p className="text-lime-500 text-xs mb-3">
+                Vestigo Insurance Provider - powered by the trusted name in{' '}
+                <span className="text-blue-400">content at large</span>
               </p>
-              <div className="grid sm:grid-cols-2 gap-4 md:gap-8 pt-4">
-                <div className="p-6 bg-gray-50 rounded-3xl border border-gray-100">
-                  <Award className="text-vestigo-gold mb-3" size={28} />
-                  <h4 className="font-black text-vestigo-navy text-sm mb-1">Miniratna Status</h4>
-                  <p className="text-xs text-gray-500 font-bold">Unparalleled governance and efficiency.</p>
-                </div>
-                <div className="p-6 bg-gray-50 rounded-3xl border border-gray-100">
-                  <ShieldCheck className="text-vestigo-gold mb-3" size={28} />
-                  <h4 className="font-black text-vestigo-navy text-sm mb-1">Certified Excellence</h4>
-                  <p className="text-xs text-gray-500 font-bold">Standard-setting asset protection.</p>
-                </div>
-              </div>
+              <p className="text-gray-400 text-xs">
+                IRDAI License No: [123456]
+              </p>
+            </div>
+            
+            {/* Company Links */}
+            <div>
+              <h4 className="font-bold mb-3 text-white text-lg">Company</h4>
+              <ul className="space-y-1.5 text-yellow-600 text-xs">
+                <li>
+                  <a href="#" className="hover:text-white transition">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition">
+                    Our Team
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition">
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+            {/* Solutions Links */}
+            <div>
+              <h4 className="font-bold mb-3 text-white text-lg">Solutions</h4>
+              <ul className="space-y-1.5 text-yellow-600 text-xs">
+                <li>
+                  <a href="#" className="hover:text-white transition">
+                    Our Services
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition">
+                    Industries
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition">
+                    Technology
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+            {/* Insights Links */}
+            <div>
+              <h4 className="font-bold mb-3 text-white text=lg">Insights</h4>
+              <ul className="space-y-1.5 text-yellow-600 text-xs">
+                <li>
+                  <a href="#" className="hover:text-white transition">
+                    Blog
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition">
+                    Resources
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition">
+                    Case Studies
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+            {/* Support Links */}
+            <div>
+              <h4 className="font-bold mb-3 text-white text-lg">Support</h4>
+              <ul className="space-y-1.5 text-yellow-600 text-xs">
+                <li>
+                  <a href="#" className="hover:text-white transition">
+                    FAQs
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition">
+                    Terms of Service
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition">
+                    Privacy Policy
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* 3. STRATEGIC VERTICALS */}
-      <section className="py-20 md:py-32 bg-vestigo-navy text-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16 md:mb-24 space-y-4">
-            <h2 className="text-xs font-black uppercase tracking-[0.4em] text-vestigo-gold">Strategic Solutions</h2>
-            <h3 className="text-3xl md:text-6xl font-black">Industrial Resilience</h3>
+          
+          {/* Copyright */}
+          <div className=" pt-5 text-center pb-0 text-blue-400 text-xs">
+            <p>© 2025 Vestigo. All rights reserved.</p>
           </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {[
-              { title: "Commercial Risk", icon: <Building2 />, href: "/solutions/commercial-insurance" },
-              { title: "Marine Logistics", icon: <Truck />, href: "/solutions/shipping-odc-cargo-handling" },
-              { title: "Employee Benefits", icon: <HeartPulse />, href: "/solutions/employee-benefits" },
-              { title: "Green Energy", icon: <Leaf />, href: "/solutions/green-energy" }
-            ].map((unit, idx) => (
-              <Link key={idx} href={unit.href} className="group p-8 md:p-10 rounded-[2.5rem] border border-white/10 hover:border-vestigo-gold hover:bg-white/5 transition-all flex flex-col bg-white/5">
-                <div className="w-14 h-14 md:w-16 md:h-16 bg-vestigo-gold/10 text-vestigo-gold rounded-2xl flex items-center justify-center mb-8 group-hover:bg-vestigo-gold group-hover:text-vestigo-navy transition-all">
-                  {unit.icon}
-                </div>
-                <h4 className="text-xl md:text-2xl font-black mb-6">{unit.title}</h4>
-                <div className="mt-auto flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-vestigo-gold">
-                  Access Unit <ChevronRight size={14} />
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 4. CTA */}
-      <section className="py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="bg-vestigo-gold rounded-[2.5rem] md:rounded-[4rem] p-10 md:p-20 text-center space-y-8 relative overflow-hidden">
-             <h2 className="text-3xl md:text-6xl font-black text-vestigo-navy tracking-tight">
-               Ready to Secure Your Future?
-             </h2>
-             <Link href="/contact" className="inline-block bg-vestigo-navy text-white px-10 py-4 md:px-12 md:py-5 rounded-full font-black text-lg md:text-xl hover:scale-105 transition-transform">
-               Consult an Expert
-             </Link>
-          </div>
-        </div>
+        </div>  
       </section>
     </div>
   );
