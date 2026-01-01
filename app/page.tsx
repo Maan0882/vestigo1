@@ -54,7 +54,7 @@ export default function HomePage() {
               <div className="relative inline-block mb-6 -mt-2">
                 <div className="bg-white absolute inset-0 rounded-full shadow-xl scale-110">
                   <div className="absolute top-13 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    <div className="w-89 h-1.5 bg-linear-to-r from-yellow-400 via-transparent to-yellow-400"></div>
+                    <div className="min-w-89 h-1.5 bg-linear-to-r from-yellow-400 via-transparent to-yellow-400"></div>
                   </div>
                 </div>
                 <div className="relative inline-flex items-center justify-center w-20 h-20 bg-slate-900 rounded-full border-5 border-yellow-400">
@@ -72,7 +72,7 @@ export default function HomePage() {
               <div className="relative inline-block mb-6 -mt-2">
                 <div className="bg-white absolute inset-0 rounded-full shadow-xl scale-110">
                   <div className="absolute top-13 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    <div className="w-89 h-1.5 bg-linear-to-r from-yellow-400 via-transparent to-yellow-400"></div>
+                    <div className="min-w-89 h-1.5 bg-linear-to-r from-yellow-400 via-transparent to-yellow-400"></div>
                   </div>
                 </div>
                 <div className="relative inline-flex items-center justify-center w-20 h-20 bg-slate-900 rounded-full border-5 border-yellow-400">
@@ -90,7 +90,7 @@ export default function HomePage() {
               <div className="relative inline-block mb-6 -mt-2">
                 <div className="bg-white absolute inset-0 rounded-full shadow-xl scale-110">
                   <div className="absolute top-13 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    <div className="w-89 h-1.5 bg-linear-to-r from-yellow-400 via-transparent to-yellow-400"></div>
+                    <div className="min-w-89 h-1.5 bg-linear-to-r from-yellow-400 via-transparent to-yellow-400"></div>
                   </div>
                 </div>
                 <div className="relative inline-flex items-center justify-center w-20 h-20 bg-slate-900 rounded-full border-5 border-yellow-400">
